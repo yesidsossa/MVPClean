@@ -15,3 +15,4 @@ public protocol BaseViewType: AnyObject {
     func setupViews()
     
 }
+

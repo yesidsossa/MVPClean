@@ -1,0 +1,6 @@
+framework module Vatosawa {
+  umbrella header "Vatosawa-umbrella.h"
+
+  export *
+  module * { export * }
+}

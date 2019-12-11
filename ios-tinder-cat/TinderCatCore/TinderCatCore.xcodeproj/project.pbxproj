@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A915B0182398161100991BDD /* TinderCatCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A915B0162398161100991BDD /* TinderCatCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9D482CFE875D2C643D07B71 /* Pods_TinderCatCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7990E3F3CCAD2D6C169EF83 /* Pods_TinderCatCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12B67B8DE09D0952708F9FE6 /* Pods-TinderCatCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderCatCore.release.xcconfig"; path = "Target Support Files/Pods-TinderCatCore/Pods-TinderCatCore.release.xcconfig"; sourceTree = "<group>"; };
+		893F68461B186572B6B76DFB /* Pods-TinderCatCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderCatCore.debug.xcconfig"; path = "Target Support Files/Pods-TinderCatCore/Pods-TinderCatCore.debug.xcconfig"; sourceTree = "<group>"; };
 		A915B0132398161100991BDD /* TinderCatCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinderCatCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A915B0162398161100991BDD /* TinderCatCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinderCatCore.h; sourceTree = "<group>"; };
 		A915B0172398161100991BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7990E3F3CCAD2D6C169EF83 /* Pods_TinderCatCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderCatCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +25,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9D482CFE875D2C643D07B71 /* Pods_TinderCatCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49F99DADF486D28391194459 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				893F68461B186572B6B76DFB /* Pods-TinderCatCore.debug.xcconfig */,
+				12B67B8DE09D0952708F9FE6 /* Pods-TinderCatCore.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../TinderCat/Pods;
+			sourceTree = "<group>";
+		};
+		567E896E868BC4745FCB67FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7990E3F3CCAD2D6C169EF83 /* Pods_TinderCatCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A915B0092398161100991BDD = {
 			isa = PBXGroup;
 			children = (
 				A915B0152398161100991BDD /* TinderCatCore */,
 				A915B0142398161100991BDD /* Products */,
+				49F99DADF486D28391194459 /* Pods */,
+				567E896E868BC4745FCB67FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +143,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A915B01B2398161100991BDD /* Build configuration list for PBXNativeTarget "TinderCatCore" */;
 			buildPhases = (
+				24ABF0A209746C20C96F103B /* [CP] Check Pods Manifest.lock */,
 				A915B00E2398161100991BDD /* Headers */,
 				A915B00F2398161100991BDD /* Sources */,
 				A915B0102398161100991BDD /* Frameworks */,
@@ -143,6 +169,7 @@
 				TargetAttributes = {
 					A915B0122398161100991BDD = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -173,6 +200,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24ABF0A209746C20C96F103B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TinderCatCore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A915B00F2398161100991BDD /* Sources */ = {
@@ -307,7 +359,9 @@
 		};
 		A915B01C2398161100991BDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 893F68461B186572B6B76DFB /* Pods-TinderCatCore.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MTXJ3M6RXZ;
@@ -324,6 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cat.tinder.TinderCatCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,7 +386,9 @@
 		};
 		A915B01D2398161100991BDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12B67B8DE09D0952708F9FE6 /* Pods-TinderCatCore.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = MTXJ3M6RXZ;

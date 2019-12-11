@@ -10,20 +10,20 @@ import Foundation
 import UIKit
 
 class BaseViewController: UIViewController, BaseViewType {
-    
+
     func initializeComponents() {
         fatalError("This method must be implemented")
     }
-    
+
     func setConstraints() {
         fatalError("This method must be implemented")
 
     }
-    
+
     func setupViews() {
         fatalError("This method must be implemented")
     }
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +31,5 @@ class BaseViewController: UIViewController, BaseViewType {
         setupViews()
         setConstraints()
     }
-    
+
 }

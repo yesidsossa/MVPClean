@@ -35,7 +35,7 @@ class FirstViewController:  BaseViewController {
     
     override func setupViews() {
         containerView.backgroundColor = UIColor.yellow
-        buttom.setTitle("Clic", for: .normal)
+        buttom.setTitle("Click", for: .normal)
         buttom.backgroundColor = UIColor.red
         containerView.addSubview(buttom)
         view.addSubview(containerView)

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,8 +28,14 @@
 		A915B0862399A70F00991BDD /* SecondCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B0852399A70F00991BDD /* SecondCoordinator.swift */; };
 		A915B0882399B0BC00991BDD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B0872399B0BC00991BDD /* ThirdViewController.swift */; };
 		A915B08B2399B84500991BDD /* CatViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B08A2399B84500991BDD /* CatViewCoordinator.swift */; };
-		C1E253906C942406A02C7B60 /* Pods_TinderCatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAAD6580756A0BE00E6B1E9E /* Pods_TinderCatTests.framework */; };
-		E4523965FFE74034DC7ACAF0 /* Pods_TinderCat_TinderCatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD54221E7DA626C0AED5B22 /* Pods_TinderCat_TinderCatUITests.framework */; };
+		A95E68DC239FF6F100BA2459 /* ErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68DB239FF6F100BA2459 /* ErrorHandlerProtocol.swift */; };
+		A95E68E0239FF81D00BA2459 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68DF239FF81D00BA2459 /* BaseView.swift */; };
+		A95E68E3239FF90500BA2459 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68E2239FF90500BA2459 /* Cat.swift */; };
+		A95E68E7239FFA5D00BA2459 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68E6239FFA5D00BA2459 /* BasePresenter.swift */; };
+		A95E68E9239FFAF500BA2459 /* ErrorProcessorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68E8239FFAF500BA2459 /* ErrorProcessorProtocol.swift */; };
+		A95E68EB239FFFC200BA2459 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68EA239FFFC200BA2459 /* TableViewAdapter.swift */; };
+		A95E68F223A02E8400BA2459 /* CatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68F123A02E8400BA2459 /* CatPresenter.swift */; };
+		A95E68F523A02F3500BA2459 /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68F423A02F3500BA2459 /* CatService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,11 +71,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		15291ADE6E3A9B83E68C70C9 /* Pods-TinderCat-TinderCatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderCat-TinderCatUITests.debug.xcconfig"; path = "Target Support Files/Pods-TinderCat-TinderCatUITests/Pods-TinderCat-TinderCatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		40E6E0911F6FC598E679AFA2 /* Pods_TinderCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		418D0D299559EBB26F39CBF1 /* Pods-TinderCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderCat.release.xcconfig"; path = "Target Support Files/Pods-TinderCat/Pods-TinderCat.release.xcconfig"; sourceTree = "<group>"; };
-		44C7AE9A71B2E59197C9C4CB /* Pods-TinderCat-TinderCatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderCat-TinderCatUITests.release.xcconfig"; path = "Target Support Files/Pods-TinderCat-TinderCatUITests/Pods-TinderCat-TinderCatUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4FCEA97FB9DECE8A1FDBD003 /* Pods-TinderCatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderCatTests.release.xcconfig"; path = "Target Support Files/Pods-TinderCatTests/Pods-TinderCatTests.release.xcconfig"; sourceTree = "<group>"; };
 		81FBD908371B54D5601D8759 /* Pods-TinderCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderCat.debug.xcconfig"; path = "Target Support Files/Pods-TinderCat/Pods-TinderCat.debug.xcconfig"; sourceTree = "<group>"; };
 		A915AFD62398156700991BDD /* TinderCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A915AFD92398156700991BDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,9 +98,14 @@
 		A915B0852399A70F00991BDD /* SecondCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoordinator.swift; sourceTree = "<group>"; };
 		A915B0872399B0BC00991BDD /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		A915B08A2399B84500991BDD /* CatViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewCoordinator.swift; sourceTree = "<group>"; };
-		AAAD6580756A0BE00E6B1E9E /* Pods_TinderCatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderCatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8C67CFC9E59FE8E0857EAE3 /* Pods-TinderCatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderCatTests.debug.xcconfig"; path = "Target Support Files/Pods-TinderCatTests/Pods-TinderCatTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DFD54221E7DA626C0AED5B22 /* Pods_TinderCat_TinderCatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderCat_TinderCatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95E68DB239FF6F100BA2459 /* ErrorHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerProtocol.swift; sourceTree = "<group>"; };
+		A95E68DF239FF81D00BA2459 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A95E68E2239FF90500BA2459 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		A95E68E6239FFA5D00BA2459 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		A95E68E8239FFAF500BA2459 /* ErrorProcessorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProcessorProtocol.swift; sourceTree = "<group>"; };
+		A95E68EA239FFFC200BA2459 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
+		A95E68F123A02E8400BA2459 /* CatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPresenter.swift; sourceTree = "<group>"; };
+		A95E68F423A02F3500BA2459 /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1E253906C942406A02C7B60 /* Pods_TinderCatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +130,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4523965FFE74034DC7ACAF0 /* Pods_TinderCat_TinderCatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,10 +141,6 @@
 			children = (
 				81FBD908371B54D5601D8759 /* Pods-TinderCat.debug.xcconfig */,
 				418D0D299559EBB26F39CBF1 /* Pods-TinderCat.release.xcconfig */,
-				15291ADE6E3A9B83E68C70C9 /* Pods-TinderCat-TinderCatUITests.debug.xcconfig */,
-				44C7AE9A71B2E59197C9C4CB /* Pods-TinderCat-TinderCatUITests.release.xcconfig */,
-				B8C67CFC9E59FE8E0857EAE3 /* Pods-TinderCatTests.debug.xcconfig */,
-				4FCEA97FB9DECE8A1FDBD003 /* Pods-TinderCatTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -149,8 +151,6 @@
 				A915B04C2398168300991BDD /* TinderCatData.framework */,
 				A915B0482398167F00991BDD /* TinderCatCore.framework */,
 				40E6E0911F6FC598E679AFA2 /* Pods_TinderCat.framework */,
-				DFD54221E7DA626C0AED5B22 /* Pods_TinderCat_TinderCatUITests.framework */,
-				AAAD6580756A0BE00E6B1E9E /* Pods_TinderCatTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,12 +180,16 @@
 		A915AFD82398156700991BDD /* TinderCat */ = {
 			isa = PBXGroup;
 			children = (
+				A95E68F323A02F0D00BA2459 /* Moks */,
+				A95E68E1239FF8DD00BA2459 /* Models */,
+				A915B051239816EE00991BDD /* Views */,
+				A95E68F023A02E3700BA2459 /* Presenters */,
 				A915AFE72398156800991BDD /* Info.plist */,
-				A915B051239816EE00991BDD /* Cat */,
 				A915B06D2398198100991BDD /* Base */,
 				A915B06C2398196F00991BDD /* Application */,
 				A915B06E239819C300991BDD /* Resources */,
 				A915B07A23998F7200991BDD /* Coordinators */,
+				A95E68DD239FF70800BA2459 /* Helpers */,
 			);
 			path = TinderCat;
 			sourceTree = "<group>";
@@ -208,12 +212,12 @@
 			path = TinderCatUITests;
 			sourceTree = "<group>";
 		};
-		A915B051239816EE00991BDD /* Cat */ = {
+		A915B051239816EE00991BDD /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				A915B0522398170700991BDD /* CatViewController.swift */,
 			);
-			path = Cat;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A915B06C2398196F00991BDD /* Application */ = {
@@ -257,6 +261,50 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		A95E68DD239FF70800BA2459 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A95E68E5239FFA2B00BA2459 /* BaseClass */,
+				A95E68DB239FF6F100BA2459 /* ErrorHandlerProtocol.swift */,
+				A95E68E8239FFAF500BA2459 /* ErrorProcessorProtocol.swift */,
+				A95E68EA239FFFC200BA2459 /* TableViewAdapter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A95E68E1239FF8DD00BA2459 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A95E68E2239FF90500BA2459 /* Cat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A95E68E5239FFA2B00BA2459 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				A95E68DF239FF81D00BA2459 /* BaseView.swift */,
+				A95E68E6239FFA5D00BA2459 /* BasePresenter.swift */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		A95E68F023A02E3700BA2459 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				A95E68F123A02E8400BA2459 /* CatPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		A95E68F323A02F0D00BA2459 /* Moks */ = {
+			isa = PBXGroup;
+			children = (
+				A95E68F423A02F3500BA2459 /* CatService.swift */,
+			);
+			path = Moks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,6 +317,7 @@
 				A915AFD32398156700991BDD /* Frameworks */,
 				A915AFD42398156700991BDD /* Resources */,
 				A915B04B2398167F00991BDD /* Embed Frameworks */,
+				3449FB1F23C4206A5B8C5A11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,7 +332,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A915B0032398156800991BDD /* Build configuration list for PBXNativeTarget "TinderCatTests" */;
 			buildPhases = (
-				EA347AB1CFA3CCD446587819 /* [CP] Check Pods Manifest.lock */,
 				A915AFE82398156800991BDD /* Sources */,
 				A915AFE92398156800991BDD /* Frameworks */,
 				A915AFEA2398156800991BDD /* Resources */,
@@ -302,7 +350,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A915B0062398156800991BDD /* Build configuration list for PBXNativeTarget "TinderCatUITests" */;
 			buildPhases = (
-				A41ACF09622DB2CAC7D5AE50 /* [CP] Check Pods Manifest.lock */,
 				A915AFF32398156800991BDD /* Sources */,
 				A915AFF42398156800991BDD /* Frameworks */,
 				A915AFF52398156800991BDD /* Resources */,
@@ -387,26 +434,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A41ACF09622DB2CAC7D5AE50 /* [CP] Check Pods Manifest.lock */ = {
+		3449FB1F23C4206A5B8C5A11 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinderCat/Pods-TinderCat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TinderCat-TinderCatUITests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-TinderCat/Pods-TinderCat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinderCat/Pods-TinderCat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CF9A82E4070D2D42F8C8D0D0 /* [CP] Check Pods Manifest.lock */ = {
@@ -431,28 +473,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA347AB1CFA3CCD446587819 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TinderCatTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -463,15 +483,23 @@
 				A915B050239816E100991BDD /* BaseViewController.swift in Sources */,
 				A915B0862399A70F00991BDD /* SecondCoordinator.swift in Sources */,
 				A915B07C23998F9000991BDD /* FirstCoordinator.swift in Sources */,
+				A95E68E9239FFAF500BA2459 /* ErrorProcessorProtocol.swift in Sources */,
+				A95E68F523A02F3500BA2459 /* CatService.swift in Sources */,
+				A95E68E0239FF81D00BA2459 /* BaseView.swift in Sources */,
+				A95E68F223A02E8400BA2459 /* CatPresenter.swift in Sources */,
 				A915AFDA2398156700991BDD /* AppDelegate.swift in Sources */,
 				A915B0822399973000991BDD /* SecondViewController.swift in Sources */,
 				A915B080239996D400991BDD /* FirstViewController.swift in Sources */,
 				A915B07923998E5400991BDD /* Coordinator.swift in Sources */,
 				A915B07E2399941C00991BDD /* BaseViewType.swift in Sources */,
+				A95E68E7239FFA5D00BA2459 /* BasePresenter.swift in Sources */,
 				A915B0882399B0BC00991BDD /* ThirdViewController.swift in Sources */,
 				A915B0532398170700991BDD /* CatViewController.swift in Sources */,
 				A915B08B2399B84500991BDD /* CatViewCoordinator.swift in Sources */,
+				A95E68E3239FF90500BA2459 /* Cat.swift in Sources */,
+				A95E68EB239FFFC200BA2459 /* TableViewAdapter.swift in Sources */,
 				A915AFDC2398156700991BDD /* SceneDelegate.swift in Sources */,
+				A95E68DC239FF6F100BA2459 /* ErrorHandlerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,7 +700,6 @@
 		};
 		A915B0042398156800991BDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8C67CFC9E59FE8E0857EAE3 /* Pods-TinderCatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -695,7 +722,6 @@
 		};
 		A915B0052398156800991BDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FCEA97FB9DECE8A1FDBD003 /* Pods-TinderCatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -718,7 +744,6 @@
 		};
 		A915B0072398156800991BDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15291ADE6E3A9B83E68C70C9 /* Pods-TinderCat-TinderCatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -739,7 +764,6 @@
 		};
 		A915B0082398156800991BDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44C7AE9A71B2E59197C9C4CB /* Pods-TinderCat-TinderCatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,33 @@
+{
+  "name": "Vatosawa",
+  "version": "0.1.7",
+  "summary": "API pod for EvercheckWallet",
+  "description": "API pod for share between condorlabs projects",
+  "homepage": "http://condorlabs.io",
+  "license": "MIT",
+  "authors": {
+    "": ""
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": "https://github.com/cebroker/Vatosawa.git",
+    "tag": "0.1.7"
+  },
+  "source_files": "Vatosawa",
+  "exclude_files": "Classes/Exclude",
+  "swift_versions": "5.0",
+  "dependencies": {
+    "Alamofire": [
+
+    ],
+    "RxSwift": [
+
+    ],
+    "KeychainAccess": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

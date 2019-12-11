@@ -1,19 +1,45 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+workspace 'TinderCat'
+
+def rxPods
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
+end
+
+def webServicePods
+  pod 'Vatosawa', :git => 'https://github.com/cebroker/Vatosawa.git'
+  pod 'Alamofire'
+end
 
 target 'TinderCat' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+use_frameworks!
 
-  # Pods for TinderCat
+rxPods
+webServicePods
 
-  target 'TinderCatTests' do
-    inherit! :search_paths
-    # Pods for testing
+target 'TinderCatCore' do
+  inherit! :search_paths
+  project '../TinderCatCore/TinderCatCore.project'
+end
+
+target 'TinderCatData' do
+  inherit! :search_paths
+  project '../TinderCatData/TinderCatData.project'
+end
+
+
+end
+
+###### Post install configs ######
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['CLANG_ENABLE_CODE_COVERAGE'] = 'NO'
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+    end
   end
-
-  target 'TinderCatUITests' do
-    # Pods for testing
-  end
-
 end
